@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sport Wave — Article</title>
+  <meta name="description" content="Sport Wave — article page">
+  <meta name="author" content="Jude Iduh">
+  <link rel="icon" href="../images/icons/favicon.ico">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="module">
+    import { renderArticleFromParams } from '../js/news.js';
+    document.addEventListener('DOMContentLoaded', () => renderArticleFromParams());
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#article-spot">Skip to article</a>
+  <header class="site-header">
+    <div class="brand"><a href="../index.html"><img src="../images/Sport Wave logo.png" alt="Sport Wave logo" width="56" height="56"><span class="brand-text">Sport Wave</span></a></div>
+    <nav class="primary-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html">News</a></li>
+        <li><a href="../about/index.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article id="article-spot"></article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; <span id="year"></span> 🍔 Jude Iduh 🍔 Enugu  🍔 Sport Wave — <a href="attributions.html">Attributions</a> — <a href="https://youtu.be/YQd0OuHPt8Q" target="_blank" rel="noopener">Demo Video</a></p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+
+   <script>
+    // small page-only scripts
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified || '—';
+    // track visits
+    const visits = (Number(localStorage.getItem('siteVisits') || 0) + 1);
+    localStorage.setItem('siteVisits', visits);
+  </script>
+</body>
+</html>

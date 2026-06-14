@@ -1,0 +1,169 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sport Wave — Home</title>
+  <meta name="description" content="Sport Wave — latest sports news, match previews, analysis and feature stories.">
+  <meta name="author" content="Jude Iduh">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sport Wave — Home">
+  <meta property="og:description" content="Latest sports news and analysis from Sport Wave.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/sport wave logo.png">
+
+  <link rel="icon" href="images/icons/favicon.ico">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/main.js"defer></script>
+  <script type="module" src="js/news.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <a href="index.html">
+        <img src="images/Sport Wave logo.png" alt="Sport Wave logo" width="56" height="56">
+        <span class="brand-text">Sport Wave</span>
+      </a>
+    </div>
+
+    <button id="menu-toggle" class="menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">☰</button>
+
+    <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="news/index.html">News</a></li>
+        <li><a href="about/index.html">About</a></li>
+        <li><a href="contact/index.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" role="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-inner">
+        <h1 id="hero-heading">Sport Wave</h1>
+        <p>Your destination for match highlights, analysis, and local sport stories.</p>
+        <p class="cta"><a href="news/index.html" class="btn">See latest stories</a></p>
+      </div>
+      <div id="featured-carousel" class="carousel" aria-live="polite"></div>
+    </section>
+
+    <!-- Profile (external URL first, then fall back to local image) -->
+    <section class="profile" aria-labelledby="profile-heading">
+      <h2 id="profile-heading">About the Author</h2>
+      <div class="profile-content">
+        <img src="images/my picture.jpg"
+             onerror="this.onerror=null;this.src='images/profile.jpg';"
+             alt="Headshot of Jude Iduh"
+             width="200" height="267" loading="lazy">
+        <div>
+          <p><strong>Jude Iduh</strong> — sports analysis enthusiast and BYU–Idaho web development student. I focus on football, basketball and tennis analytics, match reports, and data-driven commentary. Having lived in Lagos, Makurdi, Owerri and Enugu, I bring local insight to global sport stories.</p>
+          <p>Contact and follow me: <a href="https://github.com/judeiduh" target="_blank" rel="noopener">GitHub</a> | <a href="https://www.linkedin.com/in/jude-iduh?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="latest" aria-labelledby="latest-heading">
+      <h2 id="latest-heading">Latest News</h2>
+      <div id="news-grid" class="news-grid" role="list"></div>
+      <p class="note">Tip: click a card to open the full article page. Click the ♥ to favorite an article (saved in your browser).</p>
+    </section>
+
+    <section class="aside-row" aria-label="Side content">
+      <aside class="top-stories" aria-labelledby="top-stories-heading">
+        <h3 id="top-stories-heading">Top Stories</h3>
+        <ul id="top-stories-list" aria-live="polite"></ul>
+      </aside>
+
+      <aside class="upcoming" aria-labelledby="upcoming-heading">
+        <h3 id="upcoming-heading">Upcoming Matches</h3>
+        <ul id="upcoming-list" aria-live="polite"></ul>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; <span id="year"></span> 🍔 Jude Iduh 🍔 Enugu  🍔 Sport Wave- <a href="attributions.html">Attributions</a> — <a href="https://youtu.be/YQd0OuHPt8Q" target="_blank" rel="noopener">Demo Video</a></p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <!-- Accessible modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
+    <div class="modal-content" role="document">
+      <button id="modal-close" class="modal-close" aria-label="Close dialog">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script>
+    // small page-only scripts
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified || '—';
+    // track visits
+    const visits = (Number(localStorage.getItem('siteVisits') || 0) + 1);
+    localStorage.setItem('siteVisits', visits);
+  </script>
+  <script>
+  // Initialize the carousel and news grid
+  document.addEventListener('DOMContentLoaded', () => {
+    // Load featured articles into carousel
+    fetch('data/featured.json')
+      .then(response => response.json())
+      .then(data => {
+        const carousel = document.getElementById('featured-carousel');
+        data.forEach(article => {
+          const item = document.createElement('div');
+          item.className = 'carousel-item';
+          item.innerHTML = `<img src="${article.image}" alt="${article.title}">
+                            <h3>${article.title}</h3>
+                            <p>${article.summary}</p>`;
+          carousel.appendChild(item);
+        });
+      });
+
+    // Load latest news articles
+    fetch('data/news.json')
+      .then(response => response.json())
+      .then(data => {
+        const newsGrid = document.getElementById('news-grid');
+        data.forEach(article => {
+          const card = document.createElement('div');
+          card.className = 'news-card';
+          card.innerHTML = `<img src="${article.image}" alt="${article.title}">
+                            <h4>${article.title}</h4>
+                            <p>${article.summary}</p>
+                            <button class="favorite-btn" aria-label="Favorite article">♥</button>`;
+          newsGrid.appendChild(card);
+        });
+      });
+
+    // Load top stories
+    fetch('data/top-stories.json')
+      .then(response => response.json())
+      .then(data => {
+        const topStoriesList = document.getElementById('top-stories-list');
+        data.forEach(story => {
+          const listItem = document.createElement('li');
+          listItem.textContent = story;
+          topStoriesList.appendChild(listItem);
+        });
+      });
+
+    // Load upcoming matches
+    fetch('data/upcoming-matches.json')
+      .then(response => response.json())
+      .then(data => {
+        const upcomingList = document.getElementById('upcoming-list');
+        data.forEach(match => {
+          const listItem = document.createElement('li');
+          listItem.textContent = `${match.team1} vs ${match.team2} on ${match.date}`;
+          upcomingList.appendChild(listItem);
+        });
+      });
+  });
+  </script>
+</body>
+</html>

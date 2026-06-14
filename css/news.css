@@ -1,0 +1,108 @@
+/* ===========================
+   News Page Styles
+   =========================== */
+
+/* Page Title */
+.page-title,
+h1 {
+  margin: 24px 16px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+}
+
+/* News Grid */
+#all-news {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* News Card */
+.news-item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.news-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Card Content */
+.news-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.news-meta {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.news-content h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  color: #111;
+}
+
+.news-content p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: auto;
+  line-height: 1.4;
+}
+
+/* Buttons */
+.read-more {
+  margin-top: 12px;
+  align-self: flex-start;
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.read-more:hover {
+  background: #005fa3;
+}
+
+/* Fixtures Section */
+.upcoming-fixtures {
+  margin: 24px 16px;
+  padding: 16px;
+  background: #f9f9f9;
+  border-left: 4px solid #0077cc;
+  border-radius: 8px;
+}
+
+.fixture-item {
+  padding: 8px 0;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.fixture-item:last-child {
+  border-bottom: none;
+}

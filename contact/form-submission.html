@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Form Submission — Sport Wave</title>
+  <meta name="description" content="Form submission results">
+  <meta name="author" content="Jude Iduh">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="brand"><a href="../index.html"><img src="../images/Sport Wave logo.png" alt="Sport Wave logo" width="56" height="56"> Sport Wave</a></div></header>
+
+  <main id="main">
+    <h1>Thanks — Form Submitted</h1>
+    <div id="form-results" aria-live="polite"></div>
+    <p><a href="../index.html">Back to Home</a></p>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; <span id="year"></span> 🍔 Jude Iduh 🍔 Enugu  🍔 Sport Wave — <a href="attributions.html">Attributions</a> — <a href="https://youtu.be/YQd0OuHPt8Q" target="_blank" rel="noopener">Demo Video</a></p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+   <script>
+    // small page-only scripts
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified || '—';
+    // track visits
+    const visits = (Number(localStorage.getItem('siteVisits') || 0) + 1);
+    localStorage.setItem('siteVisits', visits);
+  </script>
+</body>
+</html>

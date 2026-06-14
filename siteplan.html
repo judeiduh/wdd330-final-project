@@ -1,0 +1,468 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport wave - Website Plan</title>
+    <style>
+        /* Color Schema */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #1a3e72;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Oswald', sans-serif;
+            color: #1a3e72;
+        }
+        
+        section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .color-swatch {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+        
+        .wireframe {
+            background-color: #eee;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .wireframe-box {
+            background-color: #ddd;
+            border: 1px solid #aaa;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        /* Primary Color: #1a3e72 (Navy Blue) */
+        /* Secondary Color: #e63946 (Red) */
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Sport wave - Website Plan</h1>
+        <p>Your ultimate destination for the latest sports news and updates</p>
+    </header>
+    
+    <section id="site-name">
+        <h2>1. Site Name</h2>
+        <p><strong>Sport wave</strong></p>
+        <p>This name was selected because it conveys the dynamic, up-to-the-minute nature of sports news coverage ("wave") while clearly indicating the sports focus. The name is short, memorable, and suggests we keep our finger on the pulse of the sports world.</p>
+        <p>Optional domain availability: sportwave.com or sportwave.news</p>
+    </section>
+    
+    <section id="site-purpose">
+        <h2>2. Site Purpose</h2>
+        <p>The Sport wave website will provide:</p>
+        <ul>
+            <li>Comprehensive coverage of major sports including football, basketball, tennis, and athletics</li>
+            <li>Breaking news, match results, and in-depth analysis</li>
+            <li>Player profiles and team statistics</li>
+            <li>Video highlights and photo galleries</li>
+            <li>Opinion pieces and commentary from sports experts</li>
+            <li>A platform for aspiring sports journalists to contribute content</li>
+        </ul>
+    </section>
+    
+    <section id="scenarios">
+        <h2>3. Scenarios</h2>
+        <p>Target audience questions that will drive content:</p>
+        <ol>
+            <li><strong>"What were the key highlights from last night's Champions League matches?"</strong> - This will drive our match highlights and summary content.</li>
+            <li><strong>"Where can I find statistics comparing my favorite NBA players?"</strong> - This will drive our player profiles and statistics sections.</li>
+            <li><strong>"Is there any recent news about player transfers in the Premier League?"</strong> - This will drive our transfer news and rumors section.</li>
+            <li><strong>"How can I submit my own sports article for publication?"</strong> - This will drive our contributor guidelines and submission process.</li>
+        </ol>
+    </section>
+    
+    <section id="file-naming">
+        <h2>4. File and Folder Naming Convention</h2>
+        <p><strong>Project Structure:</strong></p>
+        <pre>
+wdd231/
+└── final-project/
+    ├── index.html
+    ├── news/
+    │   ├── index.html
+    │   └── article.html
+    ├── about/
+    │   └── index.html
+    ├── contact/
+    │   ├── index.html
+    │   └── form-submission.html
+    ├── js/
+    │   ├── main.js
+    │   ├── news.js
+    │   └── form.js
+    ├── css/
+    │   ├── styles.css
+    │   ├── news.css
+    │   └── form.css
+    ├── images/
+    │   ├── logo.png
+    │   ├── icons/
+    │   │   ├── favicon.ico
+    │   │   ├── apple-touch-icon.png
+    │   │   └── icon-192x192.png
+    │   └── articles/
+    │       ├── champions-league.jpg
+    │       ├── nba-playoffs.jpg
+    │       └── tennis-wimbledon.jpg
+    └── data/
+        └── sports-data.json
+        </pre>
+        
+        <p><strong>Naming Rules:</strong></p>
+        <ul>
+            <li>All file and folder names are lowercase</li>
+            <li>No spaces - use hyphens (-) to separate words</li>
+            <li>Semantic, meaningful names that describe content/purpose</li>
+            <li>HTML files named "index.html" for main pages in their directories</li>
+            <li>CSS files organized by section (main styles, news section, forms)</li>
+            <li>JavaScript files organized by functionality</li>
+            <li>Images organized in subfolders by type/purpose</li>
+            <li>Data files in dedicated folder</li>
+        </ul>
+        
+        <p><strong>Specific File Examples:</strong></p>
+        <ul>
+            <li>Home page: <code>index.html</code></li>
+            <li>News section: <code>news/index.html</code></li>
+            <li>Individual article: <code>news/article.html</code></li>
+            <li>About page: <code>about/index.html</code></li>
+            <li>Contact form: <code>contact/index.html</code></li>
+            <li>Form submission handler: <code>contact/form-submission.html</code></li>
+            <li>Main stylesheet: <code>css/styles.css</code></li>
+            <li>News section styles: <code>css/news.css</code></li>
+            <li>Form styles: <code>css/form.css</code></li>
+            <li>Main JavaScript: <code>js/main.js</code></li>
+            <li>News JavaScript: <code>js/news.js</code></li>
+            <li>Form JavaScript: <code>js/form.js</code></li>
+            <li>Sports data: <code>data/sports-data.json</code></li>
+        </ul>
+    </section>
+    
+    <section id="color-schema">
+        <h2>5. Color Schema</h2>
+        <div>
+            <div class="color-swatch" style="background-color: #1a3e72; color: white;">#1a3e72<br>(Navy Blue)</div>
+            <div class="color-swatch" style="background-color: #e63946; color: white;">#e63946<br>(Red)</div>
+            <div class="color-swatch" style="background-color: #f8f9fa; color: #333;">#f8f9fa<br>(Light Gray)</div>
+            <div class="color-swatch" style="background-color: #333; color: white;">#333<br>(Dark Gray)</div>
+        </div>
+        <p><strong>Color Application:</strong></p>
+        <ul>
+            <li><strong>Navy Blue (#1a3e72):</strong> Primary color for headers, navigation, and accents</li>
+            <li><strong>Red (#e63946):</strong> Secondary color for buttons, important highlights, and alerts</li>
+            <li><strong>Light Gray (#f8f9fa):</strong> Background color for the page</li>
+            <li><strong>Dark Gray (#333):</strong> Primary text color for body content</li>
+        </ul>
+    </section>
+    
+    <section id="typography">
+        <h2>6. Typography</h2>
+        <p><strong>Font Selections:</strong></p>
+        <ul>
+            <li style="font-family: 'Oswald', sans-serif;"><strong>Oswald:</strong> Used for all headings (h1, h2, h3, etc.) - a bold, condensed sans-serif that works well for sports content</li>
+            <li style="font-family: 'Open Sans', sans-serif;"><strong>Open Sans:</strong> Used for body text - a clean, readable sans-serif font that pairs well with Oswald</li>
+        </ul>
+        <p>These Google Fonts were selected for their readability, modern appearance, and complementary styles that create visual hierarchy while maintaining a sporty, energetic feel appropriate for a sports news site.</p>
+    </section>
+    
+    <section id="wireframe">
+        <h2>7. Wireframe</h2>
+        
+        <h3>Desktop View</h3>
+        <div class="wireframe">
+            <div class="wireframe-box" style="text-align: center; padding: 15px;">Header with Logo and Navigation</div>
+            <div class="wireframe-box" style="text-align: center; padding: 30px;">Featured Story Carousel</div>
+            <div style="display: flex; gap: 20px;">
+                <div style="flex: 2;">
+                    <div class="wireframe-box" style="padding: 20px; margin-bottom: 10px;">Latest News Section</div>
+                    <div class="wireframe-box" style="padding: 20px;">Match Highlights</div>
+                </div>
+                <div style="flex: 1;">
+                    <div class="wireframe-box" style="padding: 20px; margin-bottom: 10px;">Top Stories</div>
+                    <div class="wireframe-box" style="padding: 20px;">Upcoming Matches</div>
+                </div>
+            </div>
+            <div class="wireframe-box" style="text-align: center; padding: 15px;">Footer</div>
+        </div>
+        
+        <h3>Mobile View</h3>
+        <div class="wireframe" style="max-width: 400px;">
+            <div class="wireframe-box" style="text-align: center; padding: 10px;">Header with Hamburger Menu</div>
+            <div class="wireframe-box" style="text-align: center; padding: 20px;">Featured Story</div>
+            <div class="wireframe-box" style="padding: 15px; margin-bottom: 10px;">Latest News</div>
+            <div class="wireframe-box" style="padding: 15px; margin-bottom: 10px;">Match Highlights</div>
+            <div class="wireframe-box" style="padding: 15px; margin-bottom: 10px;">Top Stories</div>
+            <div class="wireframe-box" style="padding: 15px; margin-bottom: 10px;">Upcoming Matches</div>
+            <div class="wireframe-box" style="text-align: center; padding: 10px;">Footer</div>
+        </div>
+    </section>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport wave - Website Plan</title>
+    <style>
+        /* Color Schema */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #1a3e72;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Oswald', sans-serif;
+            color: #1a3e72;
+        }
+        
+        section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .color-swatch {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+        
+        .wireframe {
+            background-color: #eee;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .wireframe-box {
+            background-color: #ddd;
+            border: 1px solid #aaa;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        /* Primary Color: #1a3e72 (Navy Blue) */
+        /* Secondary Color: #e63946 (Red) */
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Sport wave - Website Plan</h1>
+        <p>Your ultimate destination for the latest sports news and updates</p>
+    </header>
+    
+    <section id="site-name">
+        <h2>1. Site Name</h2>
+        <p><strong>Sport wave</strong></p>
+        <p>This name was selected because it conveys the dynamic, up-to-the-minute nature of sports news coverage ("wave") while clearly indicating the sports focus. The name is short, memorable, and suggests we keep our finger on the pulse of the sports world.</p>
+        <p>Optional domain availability: sportwave.com or sportwave.news</p>
+    </section>
+    
+    <section id="site-purpose">
+        <h2>2. Site Purpose</h2>
+        <p>The Sport wave website will provide:</p>
+        <ul>
+            <li>Comprehensive coverage of major sports including football, basketball, tennis, and athletics</li>
+            <li>Breaking news, match results, and in-depth analysis</li>
+            <li>Player profiles and team statistics</li>
+            <li>Video highlights and photo galleries</li>
+            <li>Opinion pieces and commentary from sports experts</li>
+            <li>A platform for aspiring sports journalists to contribute content</li>
+        </ul>
+    </section>
+    
+    <section id="scenarios">
+        <h2>3. Scenarios</h2>
+        <p>Target audience questions that will drive content:</p>
+        <ol>
+            <li><strong>"What were the key highlights from last night's Champions League matches?"</strong> - This will drive our match highlights and summary content.</li>
+            <li><strong>"Where can I find statistics comparing my favorite NBA players?"</strong> - This will drive our player profiles and statistics sections.</li>
+            <li><strong>"Is there any recent news about player transfers in the Premier League?"</strong> - This will drive our transfer news and rumors section.</li>
+            <li><strong>"How can I submit my own sports article for publication?"</strong> - This will drive our contributor guidelines and submission process.</li>
+        </ol>
+    </section>
+    
+    <section id="file-naming">
+        <h2>4. File and Folder Naming Convention</h2>
+        <p><strong>Project Structure:</strong></p>
+        <pre>
+wdd231/
+└── final-project/
+    ├── index.html
+    ├── news/
+    │   ├── index.html
+    │   └── article.html
+    ├── about/
+    │   └── index.html
+    ├── contact/
+    │   ├── index.html
+    │   └── form-submission.html
+    ├── js/
+    │   ├── main.js
+    │   ├── news.js
+    │   └── form.js
+    ├── css/
+    │   ├── styles.css
+    │   ├── news.css
+    │   └── form.css
+    ├── images/
+    │   ├── logo.png
+    │   ├── icons/
+    │   │   ├── favicon.ico
+    │   │   ├── apple-touch-icon.png
+    │   │   └── icon-192x192.png
+    │   └── articles/
+    │       ├── champions-league.jpg
+    │       ├── nba-playoffs.jpg
+    │       └── tennis-wimbledon.jpg
+    └── data/
+        └── sports-data.json
+        </pre>
+        
+        <p><strong>Naming Rules:</strong></p>
+        <ul>
+            <li>All file and folder names are lowercase</li>
+            <li>No spaces - use hyphens (-) to separate words</li>
+            <li>Semantic, meaningful names that describe content/purpose</li>
+            <li>HTML files named "index.html" for main pages in their directories</li>
+            <li>CSS files organized by section (main styles, news section, forms)</li>
+            <li>JavaScript files organized by functionality</li>
+            <li>Images organized in subfolders by type/purpose</li>
+            <li>Data files in dedicated folder</li>
+        </ul>
+        
+        <p><strong>Specific File Examples:</strong></p>
+        <ul>
+            <li>Home page: <code>index.html</code></li>
+            <li>News section: <code>news/index.html</code></li>
+            <li>Individual article: <code>news/article.html</code></li>
+            <li>About page: <code>about/index.html</code></li>
+            <li>Contact form: <code>contact/index.html</code></li>
+            <li>Form submission handler: <code>contact/form-submission.html</code></li>
+            <li>Main stylesheet: <code>css/styles.css</code></li>
+            <li>News section styles: <code>css/news.css</code></li>
+            <li>Form styles: <code>css/form.css</code></li>
+            <li>Main JavaScript: <code>js/main.js</code></li>
+            <li>News JavaScript: <code>js/news.js</code></li>
+            <li>Form JavaScript: <code>js/form.js</code></li>
+            <li>Sports data: <code>data/sports-data.json</code></li>
+        </ul>
+    </section>
+    
+    <section id="color-schema">
+        <h2>5. Color Schema</h2>
+        <div>
+            <div class="color-swatch" style="background-color: #1a3e72; color: white;">#1a3e72<br>(Navy Blue)</div>
+            <div class="color-swatch" style="background-color: #e63946; color: white;">#e63946<br>(Red)</div>
+            <div class="color-swatch" style="background-color: #f8f9fa; color: #333;">#f8f9fa<br>(Light Gray)</div>
+            <div class="color-swatch" style="background-color: #333; color: white;">#333<br>(Dark Gray)</div>
+        </div>
+        <p><strong>Color Application:</strong></p>
+        <ul>
+            <li><strong>Navy Blue (#1a3e72):</strong> Primary color for headers, navigation, and accents</li>
+            <li><strong>Red (#e63946):</strong> Secondary color for buttons, important highlights, and alerts</li>
+            <li><strong>Light Gray (#f8f9fa):</strong> Background color for the page</li>
+            <li><strong>Dark Gray (#333):</strong> Primary text color for body content</li>
+        </ul>
+    </section>
+    
+    <section id="typography">
+        <h2>6. Typography</h2>
+        <p><strong>Font Selections:</strong></p>
+        <ul>
+            <li style="font-family: 'Oswald', sans-serif;"><strong>Oswald:</strong> Used for all headings (h1, h2, h3, etc.) - a bold, condensed sans-serif that works well for sports content</li>
+            <li style="font-family: 'Open Sans', sans-serif;"><strong>Open Sans:</strong> Used for body text - a clean, readable sans-serif font that pairs well with Oswald</li>
+        </ul>
+        <p>These Google Fonts were selected for their readability, modern appearance, and complementary styles that create visual hierarchy while maintaining a sporty, energetic feel appropriate for a sports news site.</p>
+    </section>
+    
+    <section id="wireframe">
+        <h2>7. Wireframe</h2>
+        
+        <h3>Desktop View</h3>
+        <div class="wireframe">
+            <div class="wireframe-box" style="text-align: center; padding: 15px;">Header with Logo and Navigation</div>
+            <div class="wireframe-box" style="text-align: center; padding: 30px;">Featured Story Carousel</div>
+            <div style="display: flex; gap: 20px;">
+                <div style="flex: 2;">
+                    <div class="wireframe-box" style="padding: 20px; margin-bottom: 10px;">Latest News Section</div>
+                    <div class="wireframe-box" style="padding: 20px;">Match Highlights</div>
+                </div>
+                <div style="flex: 1;">
+                    <div class="wireframe-box" style="padding: 20px; margin-bottom: 10px;">Top Stories</div>
+                    <div class="wireframe-box" style="padding: 20px;">Upcoming Matches</div>
+                </div>
+            </div>
+            <div class="wireframe-box" style="text-align: center; padding: 15px;">Footer</div>
+        </div>
+        
+        <h3>Mobile View</h3>
+        <div class="wireframe" style="max-width: 400px;">
+            <div class="wireframe-box" style="text-align: center; padding: 10px;">Header with Hamburger Menu</div>
+            <div class="wireframe-box" style="text-align: center; padding: 20px;">Featured Story</div>
+            <div class="wireframe-box" style="padding: 15px; margin-bottom: 10px;">Latest News</div>
+            <div class="wireframe-box" style="padding: 15px; margin-bottom: 10px;">Match Highlights</div>
+            <div class="wireframe-box" style="padding: 15px; margin-bottom: 10px;">Top Stories</div>
+            <div class="wireframe-box" style="padding: 15px; margin-bottom: 10px;">Upcoming Matches</div>
+            <div class="wireframe-box" style="text-align: center; padding: 10px;">Footer</div>
+        </div>
+    </section>
+</body>
+>>>>>>> 94af33c (my finalproject)
+</html>

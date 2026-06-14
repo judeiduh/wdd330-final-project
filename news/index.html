@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sport Wave — News</title>
+  <meta name="description" content="Sport Wave — all news stories and match coverage.">
+  <meta name="author" content="Jude Iduh">
+
+  <meta property="og:title" content="Sport Wave — News">
+  <meta property="og:description" content="Latest sports news and feature stories from Sport Wave.">
+  <meta property="og:image" content="../images/logo.png">
+
+  <link rel="icon" href="../images/icons/favicon.ico">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/news.css">
+  <script type="module" src="../js/news.js" defer></script>
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brand"><a href="index.html"><img src="../images/Sport Wave logo.png" alt="Sport Wave logo" width="56" height="56"><span class="brand-text">Sport Wave</span></a></div>
+    <button id="menu-toggle" class="menu-toggle" aria-controls="primary-nav" aria-expanded="false">☰</button>
+    <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Primary">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html" aria-current="page">News</a></li>
+        <li><a href="../about/index.html">About</a></li>
+        <li><a href="../contact/index.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>News</h1>
+
+    <section aria-labelledby="news-list-heading">
+      <h2 id="news-list-heading">All Stories</h2>
+      <div id="all-news" class="news-grid" role="list"></div>
+    </section>
+
+    <section aria-labelledby="favorites-heading">
+      <h2 id="favorites-heading">Your Favorites</h2>
+      <div id="favorites-list" class="news-grid" aria-live="polite"></div>
+      <p class="note">Favorites are saved in your browser (localStorage).</p>
+    </section>
+
+    <section aria-labelledby="fixtures-heading">
+      <h2 id="fixtures-heading">Upcoming Fixtures & Schedule</h2>
+      <div id="fixtures-list" class="upcoming-fixtures" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; <span id="year"></span> 🍔 Jude Iduh 🍔 Enugu  🍔 Sport Wave — <a href="attributions.html">Attributions</a> — <a href="https://youtu.be/YQd0OuHPt8Q" target="_blank" rel="noopener">Demo Video</a></p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+  <!-- Accessible modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
+    <div class="modal-content" role="document">
+      <button id="modal-close" class="modal-close" aria-label="Close dialog">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+<script>
+    // small page-only scripts
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified || '—';
+    // track visits
+    const visits = (Number(localStorage.getItem('siteVisits') || 0) + 1);
+    localStorage.setItem('siteVisits', visits);
+</script>
+</body>
+</html>

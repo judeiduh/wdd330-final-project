@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sport Wave — About</title>
+  <meta name="description" content="About Jude Iduh — sports writer and site author.">
+  <meta name="author" content="Jude Iduh">
+
+  <meta property="og:title" content="Sport Wave — About">
+  <meta property="og:description" content="About Jude Iduh, sports author at Sport Wave.">
+  <meta property="og:image" content="../images/my picture.jpg">
+
+  <link rel="icon" href="../images/icons/favicon.ico">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="brand">
+      <a href="../index.html"><img src="../images/Sport Wave logo.png" alt="Sport Wave logo" width="56" height="56"><span class="brand-text">Sport Wave</span></a>
+    </div>
+    <nav class="primary-nav" role="navigation" aria-label="Primary">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../news/index.html">News</a></li>
+        <li><a href="index.html" aria-current="page">About</a></li>
+        <li><a href="../contact/index.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>About the Author</h1>
+
+    <section class="profile" aria-labelledby="profile-heading">
+      <h2 id="profile-heading">Meet Jude Iduh</h2>
+      <div class="profile-content">
+        <img src="../images/my picture.jpg" onerror="this.onerror=null;this.src='../images/my picture.png';" alt="Headshot of Jude Iduh" width="220" height="300" loading="lazy">
+        <div>
+          <p><strong>Jude Iduh</strong> — sports analysis enthusiast and web developer. I write match previews, data-driven analysis and local sports features. I’m currently completing my Web & Computer Programming certificate at BYU–Idaho.</p>
+          <p>Background: lived in Lagos, Makurdi, Owerri, and Enugu. Interests: football, basketball, tennis, data analysis, and community tech support.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+<footer class="site-footer" role="contentinfo">
+    <p>&copy; <span id="year"></span> 🍔 Jude Iduh 🍔 Enugu  🍔 Sport Wave — <a href="attributions.html">Attributions</a> — <a href="https://youtu.be/YQd0OuHPt8Q" target="_blank" rel="noopener">Demo Video</a></p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+
+<script>
+    // small page-only scripts
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified || '—';
+    // track visits
+    const visits = (Number(localStorage.getItem('siteVisits') || 0) + 1);
+    localStorage.setItem('siteVisits', visits);
+</script>
+
+</body>
+</html>
