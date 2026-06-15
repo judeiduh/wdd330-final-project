@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -7,7 +7,6 @@
   <meta name="description" content="Sport Wave — latest sports news, match previews, analysis and feature stories.">
   <meta name="author" content="Jude Iduh">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Sport Wave — Home">
   <meta property="og:description" content="Latest sports news and analysis from Sport Wave.">
   <meta property="og:type" content="website">
@@ -51,7 +50,6 @@
       <div id="featured-carousel" class="carousel" aria-live="polite"></div>
     </section>
 
-    <!-- Profile (external URL first, then fall back to local image) -->
     <section class="profile" aria-labelledby="profile-heading">
       <h2 id="profile-heading">About the Author</h2>
       <div class="profile-content">
@@ -60,8 +58,8 @@
              alt="Headshot of Jude Iduh"
              width="200" height="267" loading="lazy">
         <div>
-          <p><strong>Jude Iduh</strong> — sports analysis enthusiast and BYU–Idaho web development student. I focus on football, basketball and tennis analytics, match reports, and data-driven commentary. Having lived in Lagos, Makurdi, Owerri and Enugu, I bring local insight to global sport stories.</p>
-          <p>Contact and follow me: <a href="https://github.com/judeiduh" target="_blank" rel="noopener">GitHub</a> | <a href="https://www.linkedin.com/in/jude-iduh?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener">LinkedIn</a></p>
+          <p><strong>Jude Iduh</strong> is a sports analysis enthusiast and BYU–Idaho web development student. Focusing closely on football, basketball, and tennis analytics, he covers everything from deep match reports to data-driven commentary. Having spent time living in Lagos, Makurdi, Owerri, and Enugu, he brings a distinct local perspective to global sports conversations.</p>
+          <p>Connect with me on <a href="https://github.com/judeiduh" target="_blank" rel="noopener">GitHub</a> or visit my <a href="https://www.linkedin.com/in/jude-iduh?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener">LinkedIn Profile</a>.</p>
         </div>
       </div>
     </section>
@@ -69,7 +67,6 @@
     <section class="latest" aria-labelledby="latest-heading">
       <h2 id="latest-heading">Latest News</h2>
       <div id="news-grid" class="news-grid" role="list"></div>
-      <p class="note">Tip: click a card to open the full article page. Click the ♥ to favorite an article (saved in your browser).</p>
     </section>
 
     <section class="aside-row" aria-label="Side content">
@@ -86,11 +83,10 @@
   </main>
 
   <footer class="site-footer" role="contentinfo">
-    <p>&copy; <span id="year"></span> 🍔 Jude Iduh 🍔 Enugu  🍔 Sport Wave- <a href="attributions.html">Attributions</a> — <a href="https://youtu.be/YQd0OuHPt8Q" target="_blank" rel="noopener">Demo Video</a></p>
+    <p>&copy; <span id="year"></span> 🍔 Jude Iduh 🍔 Enugu  🍔 Sport Wave- <a href="attributions.html">Attributions</a>
     <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 
-  <!-- Accessible modal -->
   <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
     <div class="modal-content" role="document">
       <button id="modal-close" class="modal-close" aria-label="Close dialog">✕</button>
@@ -99,68 +95,67 @@
   </div>
 
   <script>
-    // small page-only scripts
+    // Set dynamic footer details
     document.getElementById('year').textContent = new Date().getFullYear();
     document.getElementById('lastModified').textContent = document.lastModified || '—';
-    // track visits
-    const visits = (Number(localStorage.getItem('siteVisits') || 0) + 1);
-    localStorage.setItem('siteVisits', visits);
+    
+    // Simple counter for local tracking
+    let siteVisits = Number(localStorage.getItem('siteVisits') || 0);
+    localStorage.setItem('siteVisits', siteVisits + 1);
   </script>
+  
   <script>
-  // Initialize the carousel and news grid
   document.addEventListener('DOMContentLoaded', () => {
-    // Load featured articles into carousel
+    // Populate the featured content area
     fetch('data/featured.json')
-      .then(response => response.json())
-      .then(data => {
+      .then(res => res.json())
+      .then(items => {
         const carousel = document.getElementById('featured-carousel');
-        data.forEach(article => {
-          const item = document.createElement('div');
-          item.className = 'carousel-item';
-          item.innerHTML = `<img src="${article.image}" alt="${article.title}">
-                            <h3>${article.title}</h3>
-                            <p>${article.summary}</p>`;
-          carousel.appendChild(item);
+        items.forEach(article => {
+          const wrapper = document.createElement('div');
+          wrapper.className = 'carousel-item';
+          wrapper.innerHTML = `<img src="${article.image}" alt="${article.title}">
+                               <h3>${article.title}</h3>
+                               <p>${article.summary}</p>`;
+          carousel.appendChild(wrapper);
         });
-      });
+      }).catch(err => console.error("Error loading featured content:", err));
 
-    // Load latest news articles
+    // Populate main news grid items (Favorite Button Removed Here)
     fetch('data/news.json')
-      .then(response => response.json())
-      .then(data => {
-        const newsGrid = document.getElementById('news-grid');
-        data.forEach(article => {
-          const card = document.createElement('div');
-          card.className = 'news-card';
-          card.innerHTML = `<img src="${article.image}" alt="${article.title}">
-                            <h4>${article.title}</h4>
-                            <p>${article.summary}</p>
-                            <button class="favorite-btn" aria-label="Favorite article">♥</button>`;
-          newsGrid.appendChild(card);
+      .then(res => res.json())
+      .then(articles => {
+        const grid = document.getElementById('news-grid');
+        articles.forEach(item => {
+          const block = document.createElement('div');
+          block.className = 'news-card';
+          block.innerHTML = `<img src="${item.image}" alt="${item.title}">
+                            <h4>${item.title}</h4>
+                            <p>${item.summary}</p>`;
+          grid.appendChild(block);
         });
-      });
+      }).catch(err => console.error("Error loading news feed:", err));
 
-    // Load top stories
+    // Dynamic lists (Trending stories & fixtures)
     fetch('data/top-stories.json')
-      .then(response => response.json())
+      .then(res => res.json())
       .then(data => {
-        const topStoriesList = document.getElementById('top-stories-list');
-        data.forEach(story => {
-          const listItem = document.createElement('li');
-          listItem.textContent = story;
-          topStoriesList.appendChild(listItem);
+        const displayList = document.getElementById('top-stories-list');
+        data.forEach(title => {
+          const li = document.createElement('li');
+          li.textContent = title;
+          displayList.appendChild(li);
         });
       });
 
-    // Load upcoming matches
     fetch('data/upcoming-matches.json')
-      .then(response => response.json())
-      .then(data => {
-        const upcomingList = document.getElementById('upcoming-list');
-        data.forEach(match => {
-          const listItem = document.createElement('li');
-          listItem.textContent = `${match.team1} vs ${match.team2} on ${match.date}`;
-          upcomingList.appendChild(listItem);
+      .then(res => res.json())
+      .then(matches => {
+        const scheduleList = document.getElementById('upcoming-list');
+        matches.forEach(game => {
+          const li = document.createElement('li');
+          li.textContent = `${game.team1} vs ${game.team2} (${game.date})`;
+          scheduleList.appendChild(li);
         });
       });
   });

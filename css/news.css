@@ -88,8 +88,8 @@ h1 {
   background: #005fa3;
 }
 
-/* Fixtures Section */
-.upcoming-fixtures {
+/* FIXED: Added the class dot (.) to make it valid CSS */
+.upcoming-fixtures{ 
   margin: 24px 16px;
   padding: 16px;
   background: #f9f9f9;

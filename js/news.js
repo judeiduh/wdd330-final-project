@@ -75,19 +75,19 @@ export async function renderArticleFromParams() {
   }
 }
 
-// if (typeof document !== 'undefined' && document.getElementById('all-news')) {
+if (typeof document !== 'undefined' && document.getElementById('all-news')) 
   (async () => {
     try {
-      const items = await loadNewsList();
-      const grid = document.getElementById('all-news');
-      grid.innerHTML = items.map(it => `
-        <article class="news-card">
-          <img src="../${it.image}" alt="${it.title}">
-          <h3>${it.title}</h3>
-          <p>${it.summary}</p>
-        </article>
-      `).join('');
+        const items = await loadNewsList();
+        const grid = document.getElementById('all-news');
+        grid.innerHTML = items.map(it => `
+            <article class="news-card">
+                <img src="../${it.image}" alt="${it.title}">
+                <h3>${it.title}</h3>
+                <p>${it.summary}</p>
+            </article>
+        `).join('');
     } catch (err) {
-      console.error('Error loading news:', err);
+        console.error('Error loading news:', err);
     }
-  })();
+})();

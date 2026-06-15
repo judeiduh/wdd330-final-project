@@ -1,17 +1,152 @@
 [
-  { "id": "s1", "title": "Champions League: Giant Clash", "image": "images/champions-league..jpeg", "category": "Football", "date": "2025-05-12", "summary": "A thrilling night as two giants clash for a place in the final.", "content": "Full write-up of the Champions League match...", "upcoming": false },
-  { "id": "s2", "title": "NBA Playoffs: Top Performances", "image": "images/nba-playoffs..jpg", "category": "Basketball", "date": "2025-05-14", "summary": "A look back at some incredible performances in this year's playoffs.", "content": "Detailed NBA analysis...", "upcoming": false },
-  { "id": "s3", "title": "Wimbledon: Surprise Seeds", "image": "images/winbledon.png", "category": "Tennis", "date": "2025-07-07", "summary": "Unseeded players make deep runs at Wimbledon.", "content": "Match reports and player quotes...", "upcoming": false },
-  { "id": "s4", "title": "Athletics: National Trials", "image": "images/athletics.jpg", "category": "Athletics", "date": "2025-06-01", "summary": "National trials produce new hopefuls for the championship.", "content": "Trials overview and results...", "upcoming": false },
-  { "id": "s5", "title": "Transfer Window: Premier Rumors", "image": "images/transfers.jpg", "category": "Football", "date": "2025-07-30", "summary": "Clubs prepare major moves as the transfer window heats up.", "content": "Round-up of transfer rumors...", "upcoming": true },
-  { "id": "s6", "title": "Coach Interview: Tactical Insights", "image": "images/coach.jpg", "category": "Football", "date": "2025-06-20", "summary": "A coach explains new tactical approaches.", "content": "Interview transcript and analysis...", "upcoming": false },
-  { "id": "s7", "title": "Rising Star: Young Sprinter", "image": "images/sprinter.jpg", "category": "Athletics", "date": "2025-04-28", "summary": "A young sprinter breaks junior records.", "content": "Profile and career outlook...", "upcoming": false },
-  { "id": "s8", "title": "Club Championship: Final Preview", "image": "images/club-final.jpg", "category": "Basketball", "date": "2025-08-01", "summary": "Preview of the club championship final.", "content": "Tactical preview and player matchups...", "upcoming": true },
-  { "id": "s9", "title": "Injury News: Key Player Update", "image": "images/injury.jpg", "category": "Football", "date": "2025-07-22", "summary": "Update on recovery timelines for a key player.", "content": "Medical insight and expected return...", "upcoming": false },
-  { "id": "s10", "title": "Euro Qualifiers: Standout Matches", "image": "images/euro.jpg", "category": "Football", "date": "2025-06-15", "summary": "Key matches from the Euro qualification campaign.", "content": "Match summaries...", "upcoming": false },
-  { "id": "s11", "title": "Women's League: Breakthrough Season", "image": "images/womens-league.webp", "category": "Football", "date": "2025-05-30", "summary": "A breakout season for a leading women's team.", "content": "Season overview...", "upcoming": false },
-  { "id": "s12", "title": "Cycling: Tour Highlights", "image": "images/cycling.jpeg", "category": "Cycling", "date": "2025-07-05", "summary": "Stages that defined the race.", "content": "Stage-by-stage analysis...", "upcoming": false },
-  { "id": "s13", "title": "Boxing: Title Fight Announced", "image": "images/boxing.jpg", "category": "Boxing", "date": "2025-08-10", "summary": "Championship bout scheduled for next month.", "content": "Fight card and background...", "upcoming": true },
-  { "id": "s14", "title": "Preview: Local Derby", "image": "images/local-derby.jpg", "category": "Football", "date": "2025-08-15", "summary": "Local derby promises fireworks.", "content": "Rivalry history and predictions...", "upcoming": true },
-  { "id": "s15", "title": "Referee Decisions: VAR Review", "image": "images/var.jpg", "category": "Football", "date": "2025-06-10", "summary": "A look at controversial VAR decisions.", "content": "Analysis of key moments...", "upcoming": false }
+  { 
+    "id": "s1", 
+    "title": "Tactical Masterclass in Crucial Champions League Knockout Tie", 
+    "image": "images/champions-league..jpeg", 
+    "category": "Football", 
+    "date": "2025-05-12", 
+    "summary": "A breathless night of football leaves the tie on a knife-edge ahead of the second leg.", 
+    "content": "Full write-up of the Champions League match...", 
+    "upcoming": false 
+  },
+  { 
+    "id": "s2", 
+    "title": "Unstoppable Form: Who Stepped Up in This Week's NBA Playoffs?", 
+    "image": "images/nba-playoffs..jpg", 
+    "category": "Basketball", 
+    "date": "2025-05-14", 
+    "summary": "Clutch performances from deep and elite defensive stops shake up the post-season bracket.", 
+    "content": "Detailed NBA analysis...", 
+    "upcoming": false 
+  },
+  { 
+    "id": "s3", 
+    "title": "Wimbledon Draw Blown Wide Open by Historic Early Round Upsets", 
+    "image": "images/winbledon.png", 
+    "category": "Tennis", 
+    "date": "2025-07-07", 
+    "summary": "Unseeded players seize their moment on the grass, sending major tournament favorites packing.", 
+    "content": "Match reports and player quotes...", 
+    "upcoming": false 
+  },
+  { 
+    "id": "s4", 
+    "title": "New Talents Book Tickets After Fierce National Track Trials", 
+    "image": "images/athletics.jpg", 
+    "category": "Athletics", 
+    "date": "2025-06-01", 
+    "summary": "A weekend of blistering qualification standard times unearths fresh contenders for the world stage.", 
+    "content": "Trials overview and results...", 
+    "upcoming": false 
+  },
+  { 
+    "id": "s5", 
+    "title": "Late Drama Expected as Premier League Transfer Window Enters Final Stretch", 
+    "image": "images/transfers.jpg", 
+    "category": "Football", 
+    "date": "2025-07-30", 
+    "summary": "Front offices scramble to finalize squad reinforcements as blockbuster contract negotiations heat up.", 
+    "content": "Round-up of transfer rumors...", 
+    "upcoming": true 
+  },
+  { 
+    "id": "s6", 
+    "title": "Inside the Press: Why Managers Are Modifying Out-of-Possession Systems", 
+    "image": "images/coach.jpg", 
+    "category": "Football", 
+    "date": "2025-06-20", 
+    "summary": "An exclusive tactical breakdown detailing how high-intensity build-up play is changing modern setups.", 
+    "content": "Interview transcript and analysis...", 
+    "upcoming": false 
+  },
+  { 
+    "id": "s7", 
+    "title": "Seventeen-Year-Old Sprinter Shatters Long-Standing Junior Record", 
+    "image": "images/sprinter.jpg", 
+    "category": "Athletics", 
+    "date": "2025-04-28", 
+    "summary": "An incredible performance out of the blocks announces the sudden rise of a phenomenal athlete.", 
+    "content": "Profile and career outlook...", 
+    "upcoming": false 
+  },
+  { 
+    "id": "s8", 
+    "title": "Deep Benches and Fast Breaks: Setting the Stage for the Championship Final", 
+    "image": "images/club-final.jpg", 
+    "category": "Basketball", 
+    "date": "2025-08-01", 
+    "summary": "Analyzing individual player matchups and tactical adjustments ahead of the final tip-off.", 
+    "content": "Tactical preview and player matchups...", 
+    "upcoming": true 
+  },
+  { 
+    "id": "s9", 
+    "title": "Medical Update Confirms Sidelined Spell for Star Midfielder", 
+    "image": "images/injury.jpg", 
+    "category": "Football", 
+    "date": "2025-07-22", 
+    "summary": "The first-team squad faces a major adjustment after scans confirm an extended recovery timeline.", 
+    "content": "Medical insight and expected return...", 
+    "upcoming": false 
+  },
+  { 
+    "id": "s10", 
+    "title": "Euro Qualifiers: Vital Away Points Shake Up the Group Standings", 
+    "image": "images/euro.jpg", 
+    "category": "Football", 
+    "date": "2025-06-15", 
+    "summary": "A comprehensive review of the recent international fixtures that redefined qualification hopes.", 
+    "content": "Match summaries...", 
+    "upcoming": false 
+  },
+  { 
+    "id": "s11", 
+    "title": "Sensational Form Drives Unlikely Title Contenders in Top Flight", 
+    "image": "images/womens-league.webp", 
+    "category": "Football", 
+    "date": "2025-05-30", 
+    "summary": "How consistent defensive displays and clinical counter-attacks transformed outsiders into heavy favorites.", 
+    "content": "Season overview...", 
+    "upcoming": false 
+  },
+  { 
+    "id": "s12", 
+    "title": "Punishing Mountain Incline Splits Peloton in Exhausting Stage Finish", 
+    "image": "images/cycling.jpeg", 
+    "category": "Cycling", 
+    "date": "2025-07-05", 
+    "summary": "A closer look at the brutal high-altitude climbs where overall contenders launched their big moves.", 
+    "content": "Stage-by-stage analysis...", 
+    "upcoming": false 
+  },
+  { 
+    "id": "s13", 
+    "title": "Contracts Signed for Highly Anticipated Undisputed Heavyweight Showdown", 
+    "image": "images/boxing.jpg", 
+    "category": "Boxing", 
+    "date": "2025-08-10", 
+    "summary": "The wait is over as both camps finalize arrangements for next month's massive title fight.", 
+    "content": "Fight card and background...", 
+    "upcoming": true 
+  },
+  { 
+    "id": "s14", 
+    "title": "Bragging Rights on the Line Ahead of Highly Charged Local Derby", 
+    "image": "images/local-derby.jpg", 
+    "category": "Football", 
+    "date": "2025-08-15", 
+    "summary": "Recent league form goes out the window this weekend as neighborhood rivals lock horns.", 
+    "content": "Rivalry history and predictions...", 
+    "upcoming": true 
+  },
+  { 
+    "id": "s15", 
+    "title": "Controversial Offside Rulings Spark Intense Debate Over VAR Consistency", 
+    "image": "images/var.jpg", 
+    "category": "Football", 
+    "date": "2025-06-10", 
+    "summary": "Breaking down the key refereeing decisions that dramatically flipped the outcome of recent matches.", 
+    "content": "Analysis of key moments...", 
+    "upcoming": false 
+  }
 ]
